@@ -9,7 +9,7 @@ export class MsgComponent implements OnInit {
 
   @Input() text : string;
   @Input() from : string;
-
+  @Input() msg: any;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,8 +1,10 @@
 <div [class]="from">
-  <h1></h1>
-  <div class="divMsgConteiner">
-    <mat-card>
-      <h1>{{text}}</h1>
-    </mat-card>
-  </div>
+    <h1></h1>
+    <div class="divMsgConteiner">
+        <mat-card>
+            <span><h5>{{msg.from}}</h5></span>
+            <h1>{{msg.text}}</h1>
+            <span><h5>{{msg.timeSend}}</h5></span>
+        </mat-card>
+    </div>
 </div>
