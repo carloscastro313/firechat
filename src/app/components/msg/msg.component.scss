@@ -1,0 +1,21 @@
+.admin{
+  display: grid;
+  grid-template-columns: 600px 300px;
+  grid-gap: 5px;
+  padding-bottom: 10px;
+}
+
+.user{
+  display: grid;
+  grid-template-columns: 100px 600px;
+  grid-gap: 5px;
+  padding-bottom: 10px;
+}
+
+.divMsgConteiner{
+  word-wrap: break-word;
+  height: auto;
+  width: 300px;
+  border-radius: 10px;
+
+}
