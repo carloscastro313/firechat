@@ -5,17 +5,3 @@
     background: #f1f1f1;
     overflow-y: scroll;
 }
-
-.emisor {
-    display: grid;
-    grid-template-columns: 600px 300px;
-    grid-gap: 5px;
-    padding-bottom: 10px;
-}
-
-.receptores {
-    display: grid;
-    grid-template-columns: 100px 600px;
-    grid-gap: 5px;
-    padding-bottom: 10px;
-}

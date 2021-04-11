@@ -10,7 +10,7 @@ export class FireChatService {
   constructor(private dbFire : AngularFirestore) { }
 
   public getMsg(path : string){
-    return this.dbFire.collection('/firechat/'+path+'/msg').valueChanges()
+    return this.dbFire.collection('/firechat/'+path+'/msg', ref => ref.orderBy('timeSend').limitToLast(10)).valueChanges()
   }
 
   public sengMsg(path : string, msg : string, sendBy : string){
