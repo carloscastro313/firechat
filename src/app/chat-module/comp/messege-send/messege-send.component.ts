@@ -1,4 +1,4 @@
-import { FireChatService } from './../../service/fire-chat.service';
+import { FireChatService } from '../../service/fire-chat.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -17,7 +17,9 @@ export class MessegeSendComponent implements OnInit {
 
   send(){
     if(this.msg != ''){
-      this.fc.sengMsg("user",this.msg,"admin");
+      const user = localStorage.getItem('user');
+
+      this.fc.sengMsg("user",this.msg,user);
       this.msg = '';
     }
   }

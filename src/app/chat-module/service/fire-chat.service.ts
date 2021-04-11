@@ -7,7 +7,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class FireChatService {
 
-  constructor(private dbFire : AngularFirestore, private datePipe : DatePipe) { }
+  constructor(private dbFire : AngularFirestore) { }
 
   public getMsg(path : string){
     return this.dbFire.collection('/firechat/'+path+'/msg').valueChanges()
@@ -17,7 +17,7 @@ export class FireChatService {
     this.dbFire.collection('/firechat/'+path+'/msg/').add({
       text : msg,
       from : sendBy,
-      timeSend : this.datePipe.transform(new Date(),'MM-dd-yyyy hh:mm:ss')
+      timeSend : Date.now()
     });
   }
 }

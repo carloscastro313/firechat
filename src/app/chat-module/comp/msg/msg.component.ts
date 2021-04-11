@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -10,9 +11,12 @@ export class MsgComponent implements OnInit {
   @Input() text : string;
   @Input() from : string;
   @Input() msg: any;
-  constructor() { }
+
+  user: string = '';
+  constructor(public datePipe : DatePipe) { }
 
   ngOnInit(): void {
+    this.user = localStorage.getItem('user');
   }
 
 }
